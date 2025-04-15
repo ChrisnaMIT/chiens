@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ChiensController!{% endblock %}
+
+
+{% block body %}
+    <h1>Liste des chiens</h1>
+
+    <ul>
+        {% for chien in chiens %}
+            <li><strong>{{ chien.prenom }}</strong>  {{ chien.race }}</li>
+            <a href="{{ path('app_chiens_show', {id: chien.id}) }}">voir le chien</a>
+
+
+        {% endfor %}
+    </ul>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
